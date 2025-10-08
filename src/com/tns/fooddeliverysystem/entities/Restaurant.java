@@ -1,0 +1,41 @@
+package com.tns.fooddeliverysystem.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Restaurant {
+	private int id;
+	private String name;
+	private List<FoodItem> menu;
+	
+	public Restaurant(int id, String name) {
+		this.id = id;
+		this.name = name;
+		this.menu = new ArrayList<>();
+		}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public List<FoodItem> getMenu() {
+		return this.menu;
+	}
+	
+	public void addFoodItem(FoodItem foodItem) {
+		menu.add(foodItem);
+	}
+	
+	public void removeFoodItem(int id) {
+		menu.removeIf(item -> item.getId() == id);
+	}
+	
+	@Override
+	public String toString() {
+		return "Restaurant : [id :" + id + " name : " + name + "menu : "+ menu + "]";
+	}
+}
