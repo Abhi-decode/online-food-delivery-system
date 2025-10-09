@@ -1,4 +1,4 @@
-# 🍴 Online Food Delivery System (TNS)
+# 🍴 Online Food Delivery System
 
 ## 📘 Project Overview
 
