@@ -22,10 +22,10 @@ public class FoodDeliverySystem {
     {
         Scanner sc = new Scanner(System.in);
         int customerChoice, adminChoice;
-
+        
+        System.out.println("Welcome to Food Delivery System, Choose an option below to get started!");
         while (true)
         {
-            System.out.println("Welcome to Food Delivery System, Choose an option below to get started!");
             System.out.println("\n-------------------------------------");
             System.out.println("\n1. Admin menu");
             System.out.println("2. Customer menu");
@@ -51,24 +51,31 @@ public class FoodDeliverySystem {
 
                         switch (adminChoice) {
                             case 1:
+                                System.out.println();
                                 addRestaurant(sc);
                                 break;
                             case 2:
+                                System.out.println();
                                 addFoodItemToRestaurant(sc);
                                 break;
                             case 3:
+                                System.out.println();
                                 removeFoodItemFromRestaurant(sc);
                                 break;
                             case 4:
+                                System.out.println();
                                 viewRestaurantAndMenus();
                                 break;
                             case 5:
+                                System.out.println();
                                 addDeliveryPerson(sc);
                                 break;
                             case 6:
+                                System.out.println();
                                 addDeliveryPersonToOrder(sc);
                                 break;
                             case 7:
+                                System.out.println();
                                 viewOrders();
                                 break;
                             
@@ -100,21 +107,27 @@ public class FoodDeliverySystem {
 
                         switch (customerChoice) {
                             case 1:
+                                System.out.println();
                                 addCustomer(sc);
                                 break;
                             case 2:
+                                System.out.println();
                                 viewRestaurantAndMenus();
                                 break;
                             case 3:
+                                System.out.println();
                                 addToCart(sc);
                                 break;
                             case 4:
+                                System.out.println();
                                 viewCart(sc);
                                 break;
                             case 5:
+                                System.out.println();
                                 placeOrder(sc);
                                 break;
                             case 6:
+                                System.out.println();
                                 viewOrders();
                                 break;
                             case 7:
