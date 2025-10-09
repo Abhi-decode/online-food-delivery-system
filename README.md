@@ -86,20 +86,19 @@ OnlineFoodDeliverySystem/
 
 ### 👤 Customer
 - Create a customer profile
-- Add or remove food items in the cart
+- View restaurants and their menu listings
+- Add food items to the cart
+- View food items in the cart
 - Place orders with delivery details
+- View order details
 
-### 🍔 Restaurant
+### 🔧 Admin
+- Add restaurants 
 - Manage food items (add/remove)
-- Provide menu listings to customers
-
-### 🚚 Delivery Person
-- Assigned to orders for delivery
-
-### 🧾 Order Management
-- Create and track orders
-- View order status
-- Update order delivery status (Admin/Service simulation)
+- View restaurants and their menu listings
+- Add delivery persons
+- Assign delivery persons to orders
+- View all orders
 
 ---
 
@@ -119,14 +118,16 @@ OnlineFoodDeliverySystem/
    - Right-click on `FoodDeliverySystem.java` → *Run As* → *Java Application*
 
 5. **Expected Output**
-   - Restaurants with food items
-   - Customer cart contents
-   - Order details and delivery status
+   - Interactive menu system for Admin and Customer
+   - Restaurant and food item management
+   - Cart and order management
+   - Delivery person assignment
 
 ---
 
 ## 🧾 Sample Output
 
+### Main Menu
 ```
 Welcome to Food Delivery System, Choose an option below to get started!
 
@@ -136,9 +137,12 @@ Welcome to Food Delivery System, Choose an option below to get started!
 2. Customer menu
 3. Exit 
 Choose an option : 1
+```
 
--------------------------------------
+### Admin Operations
 
+#### Adding a Restaurant
+```
 Admin Menu:
 1. Add a restaurant
 2. Add food item to restaurant
@@ -153,9 +157,10 @@ Choose an option : 1
 Enter restaurant id: 101
 Enter restaurant name: HariOmDhaba
 Restaurant added successfully
+```
 
--------------------------------------
-
+#### Adding Food Items
+```
 Admin Menu:
 1. Add a restaurant
 2. Add food item to restaurant
@@ -184,6 +189,26 @@ Admin Menu:
 6. Assign Delivery Person to Order
 7. View Orders
 8. Exit
+Choose an option : 2
+
+Enter Restaurant id: 101
+Enter Food item id: 2
+Enter Food Item name: PavBhaji
+Enter Food Item price: 140
+Food item PavBhaji is added to the restaurant with id 101
+```
+
+#### Viewing Restaurants and Menus
+```
+Admin Menu:
+1. Add a restaurant
+2. Add food item to restaurant
+3. Remove food item from restaurant
+4. View Restaurant and menus
+5. Add Delivery Person
+6. Assign Delivery Person to Order
+7. View Orders
+8. Exit
 Choose an option : 4
 
 Restaurants and Menus
@@ -194,9 +219,15 @@ Menu :
 Food Item id : 1 | name : PanjabiThali | price: 340.0
 Food Item id : 2 | name : PavBhaji | price: 140.0
 -----------------------------------------------------
+Restaurant : 
+id : 102 | name : ExpressInn
+No food items yet
+```
 
--------------------------------------
+### Customer Operations
 
+#### Creating Customer Profile
+```
 Customer Menu:
 1. Add customer
 2. View Food Items
@@ -211,9 +242,72 @@ Enter User Id : 1001
 Enter Username : Alpana
 Enter User Contact No : 7720092235
 User with name : Alpana created successfully
+```
 
--------------------------------------
+#### Viewing Available Food Items
+```
+Customer Menu:
+1. Add customer
+2. View Food Items
+3. Add Food to Cart
+4. View Cart
+5. Place Order
+6. View Orders
+7. Exit
+Choose an option : 2
 
+Restaurants and Menus
+-----------------------------------------------------
+Restaurant : 
+id : 101 | name : HariOmDhaba
+Menu :
+Food Item id : 1 | name : PanjabiThali | price: 340.0
+Food Item id : 2 | name : PavBhaji | price: 140.0
+-----------------------------------------------------
+Restaurant : 
+id : 102 | name : ExpressInn
+No food items yet
+```
+
+#### Adding Items to Cart
+```
+Customer Menu:
+1. Add customer
+2. View Food Items
+3. Add Food to Cart
+4. View Cart
+5. Place Order
+6. View Orders
+7. Exit
+Choose an option : 3
+
+Enter customer id : 1001
+Enter Restaurant id : 101
+Enter Food Item id : 2
+Enter Quantity : 2
+Food Item added to cart successfully
+```
+
+#### Viewing Cart
+```
+Customer Menu:
+1. Add customer
+2. View Food Items
+3. Add Food to Cart
+4. View Cart
+5. Place Order
+6. View Orders
+7. Exit
+Choose an option : 4
+
+Enter Customer id : 1001
+Cart : 
+Food Item : PavBhaji | Cost : 280.0 | Quantity : 2
+Total cost Rs: 280.0
+```
+
+#### Placing an Order
+```
 Customer Menu:
 1. Add customer
 2. View Food Items
@@ -226,9 +320,10 @@ Choose an option : 5
 
 Enter Customer Id: 1001
 Order placed successfully, your Order id is : 1
+```
 
--------------------------------------
-
+#### Viewing Orders
+```
 Customer Menu:
 1. Add customer
 2. View Food Items
