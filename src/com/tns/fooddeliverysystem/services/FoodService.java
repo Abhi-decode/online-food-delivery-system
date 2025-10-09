@@ -25,4 +25,22 @@ public class FoodService {
 		return foodItems;
 	}
 
+	public void addFoodItemToRestaurant(int restaurantId, FoodItem foodItem){
+		for(Restaurant restaurant : restaurants){
+			if(restaurant.getId() == restaurantId){
+				restaurant.addFoodItem(foodItem);
+				return;
+			}
+		}
+	}
+
+	public void removeFoodItemFromRestaurant(int foodItemId, int restaurantId){
+		for(Restaurant restaurant: restaurants){
+			if(restaurant.getId() == restaurantId){
+				restaurant.removeFoodItem(foodItemId);
+				return;
+			}
+		}
+	}
+
 }

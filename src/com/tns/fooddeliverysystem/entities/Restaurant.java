@@ -15,15 +15,15 @@ public class Restaurant {
 		}
 	
 	public int getId() {
-		return this.id;
+		return id;
 	}
 	
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	
 	public List<FoodItem> getMenu() {
-		return this.menu;
+		return menu;
 	}
 	
 	public void addFoodItem(FoodItem foodItem) {

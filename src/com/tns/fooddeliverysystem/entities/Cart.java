@@ -7,7 +7,7 @@ public class Cart {
 	private Map<FoodItem, Integer> items;
 
     public Cart() {
-        items = new HashMap<>();
+        this.items = new HashMap<>();
     }
 
     public void addItem(FoodItem foodItem, int quantity) {

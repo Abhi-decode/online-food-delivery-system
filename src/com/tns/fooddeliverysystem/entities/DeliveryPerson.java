@@ -12,20 +12,20 @@ public class DeliveryPerson {
 	}
 	
 	public int getDeliveryPersonId() {
-		return this.deliveryPersonId;
+		return deliveryPersonId;
 	}
 	
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	
 	public long getContactNo() {
-		return this.contactNo;
+		return contactNo;
 	}
 	
 	@Override
 	public String toString() {
-		return "Delivery Person [id : " + deliveryPersonId + " name : " + name + "contact No : " + contactNo + "]";
+		return "Delivery Person [id : " + deliveryPersonId + " | name : " + name + " | contact No : " + contactNo + "]";
 	}
 	
 }
