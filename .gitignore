@@ -27,6 +27,7 @@ hs_err_pid*
 .classpath
 .settings/
 bin/
+bin/com/
 
 # VS Code specific files
 .vscode/
@@ -35,6 +36,6 @@ bin/
 target/
 build/
 
-# OS-specific files
+# OS-generated files
 .DS_Store
 Thumbs.db
